@@ -1,0 +1,7 @@
+kafka:
+  bootstrap-servers: localhost:9092
+  topic:
+    name: vexchange
+gstreamer:
+  pipe: appsrc name="appsrc" format=3 is-live=true do-timestamp=true ! video/x-h264,width=640,height=480,framerate=30/1 ! queue ! h264parse ! mp4mux ! filesink location="D:/gst/video.mp4"
+ 
